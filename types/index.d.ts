@@ -40,6 +40,4 @@ export function parseExpression<IsIterable extends boolean = false>(expression: 
 
 export function fieldsToExpression<IsIterable extends boolean = false>(fields: CronFields, options?: ParserOptions<IsIterable>): CronExpression<IsIterable>;
 
-export function parseFile(filePath: string, callback: (err: any, data: StringResult) => any): void;
-
 export function parseString(data: string): StringResult;

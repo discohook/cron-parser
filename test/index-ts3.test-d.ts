@@ -4,7 +4,7 @@ import {
     CronExpression,
     CronFields, DateType,
     parseExpression,
-    parseFile, ParserOptions,
+    ParserOptions,
     parseString,
     fieldsToExpression,
     StringResult
@@ -96,8 +96,6 @@ expectType<CronExpression<true>>(fieldsToExpression(fields, parseOptions))
 expectType<string>(fieldsToExpression(fields).stringify())
 expectType<string>(fieldsToExpression(fields, parseOptions).stringify())
 expectType<string>(fieldsToExpression(fields, parseOptions).stringify(true))
-
-expectType<void>(parseFile('path', (err: any, data: StringResult) => console.log(data)))
 
 expectType<StringResult>(parseString('path'))
 
